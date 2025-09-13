@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --default-size: 1.125rem;
+  --dm-sans: "DM Sans";
+  --bricolage-grotesque: "Bricolage Grotesque";
+  --bricolage-weight: 700;
+
+  --blue-500: hsl(233, 67%, 56%);
+  --blue-700: hsl(248, 70%, 36%);
+
+  --orange-500: hsl(28, 100%, 52%);
+
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-200: hsl(250, 6%, 84%);
+  --neutral-300: hsl(240, 6%, 70%);
+  --neutral-600: hsl(243, 23%, 30%);
+  --neutral-700: hsl(243, 23%, 24%);
+  --neutral-800: hsl(243, 27%, 20%);
+  --neutral-900: hsl(243, 96%, 9%);
+}
+body,
+html {
+  font-family: var(--dm-sans), sans-serif;
+  font-size: var(--default-size);
+  background: var(--neutral-900) !important;
+  color: var(--neutral-0) !important;
+}
+.bg-neutral-800 {
+  background: var(--neutral-800) !important;
+}
+.bg-neutral-600 {
+  background: var(--neutral-600) !important;
+}
+.dropdown-item:hover,
+.dropdown-item-active,
+.bg-forecast {
+  background: var(--neutral-700);
+}
+.show {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.dropdown-line {
+  background: var(--neutral-600);
+  width: 90%;
+  height: 1px;
+}
+.dropdown-menu {
+  width: 15.625rem;
+}
+.l-off-margin:last-child {
+  margin-bottom: 0 !important;
+}
+.w-icon-sizes {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.s-icon-size {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.f-container {
+  width: 12%;
+  border: 1px solid var(--neutral-600);
+}
+.e-container {
+  width: 20%;
+  border: 1px solid var(--neutral-600);
+}
+.h-container {
+  background-color: var(--neutral-800) !important;
+}
+.bg-large-today {
+  background: url("./assets//images/bg-today-small.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fs-96 {
+  font-size: 6rem;
+}
+@media (min-width: 576px) {
+  .bg-large-today {
+    background: url("./assets//images/bg-today-large.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 17.875rem;
+  }
+}
+@media (max-width: 992px) {
+  .h-container {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .f-container {
+    width: 11rem;
+  }
+  .e-container {
+    width: 10.188rem;
+  }
+}
