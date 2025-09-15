@@ -6,7 +6,7 @@ type TWeatherApp = {
   loading: boolean;
   error?: string | null;
 
-  setData: (location: string) => void;
+  fetchingCity: (location?: string) => void;
 };
 
 export const weatherStore = create<TWeatherApp>((set) => ({
@@ -14,12 +14,13 @@ export const weatherStore = create<TWeatherApp>((set) => ({
   loading: false,
   error: null,
 
-  setData: async (location: string) => {
+  fetchingCity: async (location?: string) => {
+    const city = location || "Manila";
     try {
       set({ loading: true, error: null });
 
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
           import.meta.env.VITE_WEATHER_API_KEY
         }`
       );
@@ -30,5 +31,3 @@ export const weatherStore = create<TWeatherApp>((set) => ({
     }
   },
 }));
-
-export default weatherStore;

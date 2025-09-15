@@ -1,25 +1,32 @@
+import { windConvertion, feelConvertion } from "../helper/helper";
+
 type TAdditionalForecast = {
-  title: string;
-  result: number;
+  humidity?: number;
+  feels_like?: number;
+  wind_deg?: number;
 };
 
-export default function AdditionalForecast() {
-  const elementForecast: TAdditionalForecast[] = [
+export default function AdditionalForecast({
+  humidity,
+  feels_like,
+  wind_deg,
+}: TAdditionalForecast) {
+  const elementForecast = [
     {
       title: "Feels Like",
-      result: 18,
+      result: `${feelConvertion(feels_like)}°`,
     },
     {
       title: "Humidity",
-      result: 46,
+      result: `${humidity}%`,
     },
     {
       title: "Wind",
-      result: 14,
+      result: `${windConvertion(wind_deg)} km/h`,
     },
     {
       title: "Precipitation",
-      result: 0,
+      result: "0 mm",
     },
   ];
   return (
@@ -30,7 +37,7 @@ export default function AdditionalForecast() {
           key={index}
         >
           <p className="fs-6 opacity-75">{value.title}</p>
-          <p className="fs-5 p-0 m-0">{value.result}°</p>
+          <p className="fs-5 p-0 m-0">{value.result}</p>
         </div>
       ))}
     </div>

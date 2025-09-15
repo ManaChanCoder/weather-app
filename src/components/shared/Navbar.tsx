@@ -13,7 +13,7 @@ export default function Navbar() {
   const [checkPrecipitation, setCheckPrecipitation] = useState<boolean>(false);
   const [dropdown, setDropdown] = useState<boolean>(false);
   return (
-    <div className="d-flex justify-content-between align-items-center py-3 px-5">
+    <div className="d-flex justify-content-between align-items-center py-3 px-0 px-md-5">
       <img src={Logo} alt="sunflower" />
       <div className="dropdown">
         <button

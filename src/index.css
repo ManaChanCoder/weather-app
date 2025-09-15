@@ -36,6 +36,9 @@ html {
 .bg-forecast {
   background: var(--neutral-700);
 }
+.outline-none {
+  outline: none;
+}
 .show {
   position: absolute;
   top: 100%;
@@ -74,6 +77,10 @@ html {
 .h-container {
   background-color: var(--neutral-800) !important;
 }
+.se-container {
+  width: 32.875rem;
+}
+
 .bg-large-today {
   background: url("./assets//images/bg-today-small.svg");
   background-position: center;
@@ -82,6 +89,9 @@ html {
 }
 .fs-96 {
   font-size: 6rem;
+}
+.fs-52 {
+  font-size: 3.25rem;
 }
 @media (min-width: 576px) {
   .bg-large-today {
@@ -103,5 +113,16 @@ html {
   }
   .e-container {
     width: 10.188rem;
+  }
+  .se-container {
+    width: 21.438rem;
+  }
+}
+@media (max-width: 768px) {
+  .se-container {
+    width: 100%;
+  }
+  .se-btn {
+    width: 100%;
   }
 }
